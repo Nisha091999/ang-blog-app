@@ -12,7 +12,7 @@ This project is an Angular-based web application with Firebase as the backend. I
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -170,10 +170,4 @@ export class AppRoutingModule { }
 5. Push to the branch (`git push origin feature-branch`).
 6. Open a pull request.
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to reach out if you have any questions or need further assistance!
