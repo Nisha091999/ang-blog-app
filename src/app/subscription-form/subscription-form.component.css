@@ -1,0 +1,18 @@
+.card{
+    background-color: var(--secondary-color);
+    width: 1290px;    
+}
+
+input[type = text], input[type = email] {
+    
+    width: 100%;
+}
+
+.subs-text{
+    width: 500px;
+}
+
+.custom-width-btn{
+    width: 200px;
+    color: white;
+}
