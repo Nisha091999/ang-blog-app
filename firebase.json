@@ -1,0 +1,17 @@
+{
+  "hosting": [
+    {
+      "public": "ang-blog-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "ang-blog-app",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

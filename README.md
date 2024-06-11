@@ -1,173 +1,27 @@
-# ang-blog-app
+# AngBlogApp
 
-This project is an Angular-based web application with Firebase as the backend. It features a blog platform with functionalities such as post categorization, user comments, subscription forms, and more.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
-## Table of Contents
+## Development server
 
-- [Project Title](#project-title)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Running the Project](#running-the-project)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
-## Features
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-- Responsive Header and Footer
-- Category Navigation Bar
-- Home Page displaying posts
-- Single Category View
-- Single Post View with comments
-- Terms and Conditions Page
-- Contact Us Page
-- Subscription Form
-- Comment Form and Comment List
-- About Us Page
-- Post Cards layout for posts
+## Build
 
-## Prerequisites
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-- Node.js and npm installed
-- Angular CLI installed
-- Firebase account for setting up Firestore
+## Running unit tests
 
-## Installation
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
-   ```
+## Running end-to-end tests
 
-2. **Install Angular CLI globally if you haven't already:**
-   ```bash
-   npm install -g @angular/cli
-   ```
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-3. **Install project dependencies:**
-   ```bash
-   npm install
-   ```
+## Further help
 
-4. **Set up Firebase:**
-   - Go to the [Firebase Console](https://console.firebase.google.com/)
-   - Create a new project
-   - Add a web app to the project and get the Firebase configuration
-   - Replace the `firebaseConfig` in `src/environments/environment.prod.ts` with your Firebase configuration:
-     ```typescript
-     export const environment = {
-       production: true,
-       firebaseConfig: {
-         apiKey: "your-api-key",
-         authDomain: "your-auth-domain",
-         projectId: "your-project-id",
-         storageBucket: "your-storage-bucket",
-         messagingSenderId: "your-messaging-sender-id",
-         appId: "your-app-id"
-       }
-     };
-     ```
-
-## Running the Project
-
-1. **Start the Angular development server:**
-   ```bash
-   ng serve
-   ```
-
-2. Open your browser and navigate to `http://localhost:4200/`.
-
-## Project Structure
-
-Here is an overview of the project's structure:
-
-```
-src/
-│
-├── app/
-│   ├── layouts/
-│   │   ├── header/
-│   │   ├── category-navbar/
-│   │   ├── footer/
-│   │   └── post-card/
-│   │
-│   ├── pages/
-│   │   ├── home/
-│   │   ├── single-category/
-│   │   ├── single-post/
-│   │   ├── terms-and-condition/
-│   │   ├── contact-us/
-│   │   └── about-us/
-│   │
-│   ├── comments/
-│   │   ├── comment-form/
-│   │   └── comment-list/
-│   │
-│   ├── subscription-form/
-│   │
-│   ├── app-routing.module.ts
-│   ├── app.component.ts
-│   ├── app.module.ts
-│   └── ...
-│
-├── environments/
-│   ├── environment.prod.ts
-│   └── environment.ts
-│
-└── ...
-```
-
-### app-routing.module.ts
-
-This file defines the routes for the application.
-
-```typescript
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { SingleCategoryComponent } from './pages/single-category/single-category.component';
-import { SinglePostComponent } from './pages/single-post/single-post.component';
-import { TermsAndConitionComponent } from './pages/terms-and-conition/terms-and-conition.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'category/:category/:id', component: SingleCategoryComponent },
-  { path: 'post/:id', component: SinglePostComponent },
-  { path: 'about', component: AboutUsComponent },
-  { path: 'term-conditions', component: TermsAndConitionComponent },
-  { path: 'contact', component: ContactUsComponent }
-];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
-```
-
-## Technologies Used
-
-- **Frontend:**
-  - Angular
-  - Angular CLI
-  - AngularFire (Angular + Firebase)
-  - FormsModule
-
-- **Backend:**
-  - Firebase Firestore
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add some feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
